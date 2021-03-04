@@ -4,15 +4,33 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import {Vue, Options} from 'vue-class-component'
 import HelloWorld from './components/HelloWorld.vue'
 
-export default defineComponent({
-  name: 'App',
+
+@Options( {
+  name: "App",
   components: {
     HelloWorld
   }
 })
+export default class App extends Vue {
+  msg: number = 123
+
+  helloMsg: string = 'hello world'
+
+  mounted() {
+    this.greet()
+  }
+
+  get computedMsg() {
+    return `computed ${this.msg}`
+  }
+
+  greet() {
+    alert(`greeting ${this.msg}`)
+  }
+ }
 </script>
 
 <style>
