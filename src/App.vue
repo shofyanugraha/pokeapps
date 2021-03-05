@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts">
-import {Vue, Options} from 'vue-class-component'
+import {Vue, Options, } from 'vue-class-component'
 import { useRoute } from 'vue-router'
 // import { computed, inject, ref } from '__VLS_vue'
 import HelloWorld from './components/HelloWorld.vue'
